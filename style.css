@@ -1,0 +1,165 @@
+body {
+    background-color: #BBB;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header,
+section,
+footer {
+    width: 100%;
+    min-width: 320px;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: radial-gradient(#444, #111);
+    color: white;
+}
+
+input#menu-switch {
+    display: none;
+}
+
+#menu-switch+nav>label {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 100;
+}
+
+div.menu-switch {
+    display: none;
+    width: 3em;
+    height: 5em;
+    margin-top: 1em;
+    background-color: rgba(191,191,191,.375);
+}
+
+div.menu-switch::before {
+    display: none;
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 200vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    /*margin-top: 1em;*/
+    background-color: rgba(0, 0, 0, .375);
+}
+
+div.menu-switch::after {
+    content:'⟩';
+    opacity: .75;
+    font-size: 3em;
+    padding-left: .325em;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+nav.dawid-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin: 2.5rem 0;
+    will-change: transform;
+}
+
+nav.dawid-nav ul {
+    display: inline-block;
+    margin: 0;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, .25);
+    border-radius: 4px;
+    list-style: none;
+    padding: 0;
+}
+
+nav.dawid-nav li {
+    float: left;
+    padding: 0 2px;
+}
+
+nav.dawid-nav  a {
+    color: rgba(255, 255, 255, .85);
+    text-decoration: none;
+    padding: 2em 3em;
+    line-height: 5em;
+}
+
+nav.dawid-nav a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+h1 {
+    text-align: center;
+}
+
+header>.container::before {
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 7em;
+}
+
+.container {
+    width: 85%;
+    max-width: 1300px;
+    margin: auto;
+    padding-bottom: 2em;
+}
+
+@media screen and (max-width: 800px) {
+    div.menu-switch {
+        display: block;
+    }
+
+    header>nav.dawid-nav  {
+        position: fixed;
+        width: 240px;
+        left: -240px;
+        top: 0;
+        transform: translateX(0);
+        margin: initial;
+        height: 200%;
+        text-align: initial;
+        background-color: rgba(0, 0, 0, .9375);
+        transition: transform 200ms;
+    }
+
+    header>nav.dawid-nav>ul {
+        display: block;
+        padding: 0;
+        border-radius: initial;
+        box-shadow: none;
+    }
+
+    header>nav.dawid-nav>ul>li {
+        float: none;
+    }
+
+    header>nav.dawid-nav>ul>li>a {
+        padding: 2em;
+    }
+
+    #menu-switch:checked+nav.dawid-nav {
+        transform: translateX(100%);
+    }
+
+    #menu-switch:checked+nav.dawid-nav .menu-switch::before {
+        display: block;
+    }
+}
+
+/*
+*,
+*:before,
+*:after {
+    outline: solid 1px red !important;
+}
+*/
