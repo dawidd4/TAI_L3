@@ -1,5 +1,10 @@
 body {
     background-color: #BBB;
+}
+
+/*
+body {
+    background-color: #BBB;
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -34,6 +39,7 @@ div.menu-switch {
     height: 5em;
     margin-top: 1em;
     background-color: rgba(191,191,191,.375);
+    cursor: pointer;
 }
 
 div.menu-switch::before {
@@ -46,7 +52,6 @@ div.menu-switch::before {
     left: 0;
     z-index: -1;
 
-    /*margin-top: 1em;*/
     background-color: rgba(0, 0, 0, .375);
 }
 
@@ -156,6 +161,7 @@ header>.container::before {
     }
 }
 
+*/
 /*
 *,
 *:before,
