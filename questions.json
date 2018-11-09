@@ -1,0 +1,51 @@
+[{
+        "question": "Jaki kolor skóry ma Shrek?",
+        "prompts": ["Żółty", "Fioletowy", "Zielony", "Pomarańczowy"],
+        "answer": 3
+    },
+    {
+        "question": "Która marka samochodu ma 4 pierścienie w logo?",
+        "prompts": ["Audi", "BMW", "Citroen", "Ford"],
+        "answer": 1
+    },
+    {
+        "question": "Jaki jest ulubiony gatunek muzyczny autora Quizu?",
+        "prompts": ["Pop", "Jazz", "Blues", "Muzyka alternatywna"],
+        "answer": 4
+    },
+    {
+        "question": "Ile motywów do wyboru ma Youtube?",
+        "prompts": ["1", "2", "3", "4"],
+        "answer": 2
+    },
+    {
+        "question": "Wskaż najdroższy burger z klasycznego menu McDonalds",
+        "prompts": ["Drwala na ostro", "Podwójny McRoyal pikantny", "Big Mac", "Chicken Box"],
+        "answer": 2
+    },
+    {
+        "question": "Album jakiego zespołu wygrał nagrodę Grammy w 2014 roku?",
+        "prompts": ["Morning Phase, Beck", "In the Lonely Hour, Sam Smith", "Beyoncé, Beyoncé", "Girl, Pharell Williams"],
+        "answer": 1
+    },
+    {
+        "question": "Najpopularniejsza przeglądarka internetowa w 2018 roku",
+        "prompts": ["Chrome", "Firefox", "Opera", "Saphari"],
+        "answer": 1
+    },
+    {
+        "question": "W którym roku zakończyła się I wojna światowa?",
+        "prompts": ["1914", "1945", "1939", "1918"],
+        "answer": 4
+    },
+    {
+        "question": "Spotify, w kategori składanek według dekad - z których lat XX wieku znajdziemy najstarszą playlistę Country?",
+        "prompts": ["'20s", "'30s", "'40s", "'50s"],
+        "answer": 3
+    },
+    {
+        "question": "Kto został wybrany na prezydenta w roku 2015 w Polsce?",
+        "prompts": [ "Lech Wałęsa", "Lech Kaczyński", "Bronisław Komorowski", "Andrzej Duda" ],
+        "answer": 4
+    }
+]

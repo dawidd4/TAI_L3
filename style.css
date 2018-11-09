@@ -28,3 +28,7 @@ body {
     margin-top: 1rem;
     white-space: normal;
 }
+
+#question-results > .row > div:first-child > ol > li:first-child > b {
+    color: mediumseagreen;
+}

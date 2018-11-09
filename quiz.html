@@ -11,9 +11,8 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-        <a class="navbar-brand" href="#">Dawid Karwat</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="javascript:void(0)">Dawid Karwat</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -30,16 +29,15 @@
             <div class="col">
                 <div class="card quiz-container mx-auto">
                     <div class="card-header progress invisible">
-                        <div class="progress-bar" role="progressbar" style="width: 0%; transition: .5s;" aria-valuenow="0"
-                            aria-valuemin="0" aria-valuemax="100">0/10</div>
+                        <div class="progress-bar" style="width: 0%; transition: .5s;">0/10</div>
                     </div>
 
-                    <div class="card-body questions d-none" id="question-start">
+                    <div class="card-body questions" id="question-start">
                         <h5 class="card-title text-center">Wielki Quiz</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Quiz sprawdzający zbędną wiedzę.</h6>
                         <p class="card-text">Quiz składa się z 10 pytań. Na każde pytanie masz 15 sekund na
                             odpowiedź.
-                            Dane osobowe nie są zbierane, jedynie historia wyników w historii przeglądarki. Jest to
+                            Dane osobowe nie są zbierane, jedynie wyniki w historii przeglądarki. Jest to
                             tylko przykładowy, anonimowy test. </p>
                         <p class="card-text">Kliknij <strong>Start</strong>, by rozpocząć test.</p>
                         <a href="javascript:void(0)" onclick="results()" class="card-link">Historia wyników</a>
@@ -49,7 +47,7 @@
                         <h5 class="card-title text-center">Historia</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Historia ostatnich dziesięciu testów</h6>
                         <div class="row">
-                            <div class="col">
+                            <div class="col-4 offset-2">
                                 <ol>
                                     <li><b>70%</b></li>
                                     <li><b>70%</b></li>
@@ -58,7 +56,7 @@
                                     <li><b>70%</b></li>
                                 </ol>
                             </div>
-                            <div class="col">
+                            <div class="col-4">
                                 <ol start="6">
                                     <li><b>70%</b></li>
                                     <li><b>70%</b></li>
@@ -69,31 +67,31 @@
                             </div>
                         </div>
                         <p class="card-text">Średnia ostatnich testów: <strong id="average">70%</strong></p>
-                        <a href="javascript:void(0)" onclick="quizpage()" class="card-link">Strona główna</a>
+                        <a href="javascript:void(0)" onclick="quizMain()" class="card-link">Strona główna</a>
                     </div>
 
-                    <div class="card-body questions" id="question-01">
+                    <div class="card-body questions d-none" id="question-01">
                         <h5 class="card-title text-center">Pytanie 1</h5>
                         <h6 class="card-subtitle mb-2 text-muted">pytanie..</h6>
                         <div class="row">
                             <div class="col-6">
-                                    <button class="btn btn-secondary">odp1</button>
-                                    <button class="btn btn-secondary">odp2</button>
+                                <button class="btn btn-secondary">odp1</button>
+                                <button class="btn btn-secondary">odp2</button>
                             </div>
                             <div class="col-6">
-                                    <button class="btn btn-secondary">odp3</button>
-                                    <button class="btn btn-secondary">odp4</button>
+                                <button class="btn btn-secondary">odp3</button>
+                                <button class="btn btn-secondary">odp4</button>
 
                             </div>
                         </div>
                     </div>
-
+                    
                 </div>
             </div>
         </div>
         <div class="row my-1">
-            <div class="col text-center" id="question-buttons">
-                <button class="btn btn-primary">Start</button>
+            <div class="col text-center" id="question-nav-buttons">
+                <button class="btn btn-success">Start</button>
                 <button class="btn btn-secondary disabled">Następne</button>
                 <button class="btn btn-warning disabled">Reset</button>
                 <button class="btn btn-danger disabled">Koniec</button>
@@ -113,6 +111,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+        <script src="quiz.js"></script>
 </body>
 
 </html>
