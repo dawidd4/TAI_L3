@@ -11,6 +11,12 @@ body {
 .questions {
     animation: fade-in 500ms;
 }
+.progress {
+    padding: 0 0 20px;
+}
+.progress-bar {
+    height: 20px;
+}
 
 @keyframes fade-in {
     from {

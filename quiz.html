@@ -29,14 +29,13 @@
             <div class="col">
                 <div class="card quiz-container mx-auto">
                     <div class="card-header progress invisible">
-                        <div class="progress-bar" style="width: 0%; transition: .5s;">0/10</div>
+                        <div class="progress-bar" style="width: 0%;">0/10</div>
                     </div>
 
                     <div class="card-body questions" id="question-start">
                         <h5 class="card-title text-center">Wielki Quiz</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Quiz sprawdzający zbędną wiedzę.</h6>
-                        <p class="card-text">Quiz składa się z 10 pytań. Na każde pytanie masz 15 sekund na
-                            odpowiedź.
+                        <p class="card-text">Quiz składa się z 10 pytań.
                             Dane osobowe nie są zbierane, jedynie wyniki w historii przeglądarki. Jest to
                             tylko przykładowy, anonimowy test. </p>
                         <p class="card-text">Kliknij <strong>Start</strong>, by rozpocząć test.</p>
@@ -45,8 +44,8 @@
 
                     <div class="card-body questions d-none" id="question-results">
                         <h5 class="card-title text-center">Historia</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Historia ostatnich dziesięciu testów</h6>
-                        <div class="row">
+                        <h6 class="card-subtitle mb-2 text-muted">Wyniki ostatnich testów</h6>
+                        <div class="row" id="results">
                             <div class="col-4 offset-2">
                                 <ol>
                                     <li><b>70%</b></li>
@@ -66,22 +65,21 @@
                                 </ol>
                             </div>
                         </div>
-                        <p class="card-text">Średnia ostatnich testów: <strong id="average">70%</strong></p>
+                        <p class="card-text" id="average">Średnia ostatnich testów: <strong>BRAK</strong></p>
                         <a href="javascript:void(0)" onclick="quizMain()" class="card-link">Strona główna</a>
                     </div>
 
-                    <div class="card-body questions d-none" id="question-01">
-                        <h5 class="card-title text-center">Pytanie 1</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">pytanie..</h6>
-                        <div class="row">
+                    <div class="card-body questions d-none" id="questions">
+                        <h5 class="card-title text-center">Pytanie <span id="question-number">1</span></h5>
+                        <h6 class="card-subtitle mb-2 text-muted" id="question-text">pytanie..</h6>
+                        <div class="row" id="question-promts">
                             <div class="col-6">
-                                <button class="btn btn-secondary">odp1</button>
-                                <button class="btn btn-secondary">odp2</button>
+                                <button class="btn btn-secondary prompt">odp1</button>
+                                <button class="btn btn-secondary prompt">odp2</button>
                             </div>
                             <div class="col-6">
-                                <button class="btn btn-secondary">odp3</button>
-                                <button class="btn btn-secondary">odp4</button>
-
+                                <button class="btn btn-secondary prompt">odp3</button>
+                                <button class="btn btn-secondary prompt">odp4</button>
                             </div>
                         </div>
                     </div>
@@ -91,16 +89,10 @@
         </div>
         <div class="row my-1">
             <div class="col text-center" id="question-nav-buttons">
-                <button class="btn btn-success">Start</button>
+                <button class="btn btn-success disabled">Start</button>
                 <button class="btn btn-secondary disabled">Następne</button>
                 <button class="btn btn-warning disabled">Reset</button>
                 <button class="btn btn-danger disabled">Koniec</button>
-                <!--<div class="btn-group" role="group" aria-label="Toolbar with button groups">
-                    <button type="button" class="btn btn-primary">Start</button>
-                    <button type="button" class="btn btn-secondary">Następne</button>
-                    <button type="button" class="btn btn-warning">Reset</button>
-                    <button type="button" class="btn btn-danger">Koniec</button>
-                </div>-->
             </div>
         </div>
     </div>
