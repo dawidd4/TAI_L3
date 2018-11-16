@@ -72,14 +72,16 @@ let average = function (arr) {
 }
 
 let getResults = function () {
-    let resultsStorage = JSON.parse(localStorage.getItem('resultsStorage'));
+    let resultsStorage = {};
+    if('resutlsStorage' in localStorage){
+        resultsStorage = JSON.parse(localStorage.getItem('resultsStorage'));
+    }
     if (
         resultsStorage == null ||
         resultsStorage.length != numberOfRestults
     ) {
         localStorage.setItem('resultsStorage', JSON.stringify(new Array(numberOfRestults).fill(-1)));
     }
-    console.log("Results: " + resultsStorage);
 
     let resultsAverage = average(resultsStorage);
     localStorage.setItem('resultsAverage', JSON.stringify(resultsAverage));
@@ -297,7 +299,6 @@ fetch('questions.json')
     .then(response => response.json())
     .then(quiz => {
         readyForQuiz();
-        console.log(quiz[0].prompts[0]);
         questionsList = quiz;
         return;
     });
